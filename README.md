@@ -10,8 +10,9 @@ This tool is still WIP.
  
 ## Dependencies
 
-Python 3
-Neo4j
+`Python 3`
+
+`Neo4j`
 
 ## Installation
 
