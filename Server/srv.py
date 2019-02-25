@@ -17,7 +17,7 @@ class ThreadedServer(object):
 			threading.Thread(target = self.listen_client, args = (client,address)).start()
 
 	def listen_client(self, client, address):
-		size = 7
+		size = 1024
 		while True:
 			try:
 				data = client.recv(size)

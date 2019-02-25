@@ -12,6 +12,6 @@ sock.connect((host,int(port)))
 msg = "example"
 
 while True:
-	sock.send(msg)
-	sock.recv(7)
+	sock.send(msg.encode())
+	sock.recv(1024)
 	time.sleep(3)
