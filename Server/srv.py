@@ -30,4 +30,4 @@ class ThreadedServer(object):
 				return False
 
 port = int(input("Port: "))
-ThreadedServer('', port).listen()
+ThreadedServer("0.0.0.0", port).listen()
