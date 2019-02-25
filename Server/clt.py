@@ -9,9 +9,9 @@ port_src = input("Source port: ")
 sock.bind(('',int(port_src)))
 sock.connect((host,int(port)))
 
-msg = "example message"
+msg = "example"
 
 while True:
-	sock.send(msg.encode())
-	sock.recv(1024)
+	sock.send(msg)
+	sock.recv(7)
 	time.sleep(3)
