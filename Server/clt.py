@@ -5,6 +5,8 @@ import time
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 host = input("Server IP address: ")
 port = input("Server port: ")
+port_src = input("Source port: ")
+sock.bind(('',int(port_src)))
 sock.connect((host,int(port)))
 
 msg = "example message"
