@@ -48,15 +48,19 @@ class Capture:
 		"""Captures n packets (100 by default) and applies the callback function to each of them"""
 
 		capture_filter = "ip and src net " + subnet
-		packets = sniff(iface=self.iface, prn=self.callback, count=n, filter=capture_filter)
+		packets = sniff(iface=self.iface, prn=self.callback, count=n, filter=capture_filter, store=0)
 		wrpcap("sniff.pcap", packets)
 
 # Create a connection to the server
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-host = input("Server IP address: ")
-port = input("Server port: ")
-subnet = input("Subnet: ")
+#host = input("Server IP address: ")
+#port = input("Server port: ")
+#subnet = input("Subnet: ")
+host = 10.132.0.2
+port = 8888
+subnet = 10.132.0.0/28
 sock.connect((host,int(port)))
+print("Connected...")
 # Capture packets indefinitely, callback function will send them to the server
-c = Capture("en1")
+c = Capture("eth0")
 c.capture(subnet, 0)
