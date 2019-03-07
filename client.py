@@ -56,9 +56,9 @@ sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 #host = input("Server IP address: ")
 #port = input("Server port: ")
 #subnet = input("Subnet: ")
-host = 10.132.0.2
-port = 8888
-subnet = 10.132.0.0/28
+host = "10.132.0.2"
+port = "8888"
+subnet = "10.132.0.0/28"
 sock.connect((host,int(port)))
 print("Connected...")
 # Capture packets indefinitely, callback function will send them to the server
