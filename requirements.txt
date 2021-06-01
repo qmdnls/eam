@@ -16,5 +16,5 @@ pytest==4.1.1
 pytz==2018.9
 scapy==2.4.2
 six==1.12.0
-urllib3==1.24.2
+urllib3==1.26.5
 wcwidth==0.1.7
