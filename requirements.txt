@@ -6,7 +6,7 @@ colorama==0.4.1
 more-itertools==5.0.0
 neo4j-driver==1.6.2
 neotime==1.0.0
-numpy==1.15.4
+numpy==1.22.0
 pluggy==0.8.1
 prompt-toolkit==1.0.15
 py==1.7.0
